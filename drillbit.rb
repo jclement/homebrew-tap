@@ -5,21 +5,21 @@
 class Drillbit < Formula
   desc "A tool for managing SSH tunnels to PostgreSQL databases in Docker environments"
   homepage "https://github.com/jclement/drillbit"
-  version "0.2.11"
+  version "0.2.12"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/drillbit/releases/download/v0.2.11/drillbit_0.2.11_darwin_amd64.tar.gz"
-      sha256 "4bd128863cc4cd0b4841f47d9f1a0f4aaa5eb383b1c41cac512a6c05ca402b6f"
+      url "https://github.com/jclement/drillbit/releases/download/v0.2.12/drillbit_0.2.12_darwin_amd64.tar.gz"
+      sha256 "b1109bba72b1a435adffbcac25e2a09c91c4c9d5615a75e5fa5701b245c5f7cf"
 
       define_method(:install) do
         bin.install "drillbit"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/drillbit/releases/download/v0.2.11/drillbit_0.2.11_darwin_arm64.tar.gz"
-      sha256 "cb89028a631f73131ccefea9dbe19a5bb7079421a4a37967ddd45f09ca74b61d"
+      url "https://github.com/jclement/drillbit/releases/download/v0.2.12/drillbit_0.2.12_darwin_arm64.tar.gz"
+      sha256 "59ac2e0bc9c2894614a78da8a3695bbd7aa742982037b187fcbe20dd15be6cd8"
 
       define_method(:install) do
         bin.install "drillbit"
@@ -29,15 +29,15 @@ class Drillbit < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/drillbit/releases/download/v0.2.11/drillbit_0.2.11_linux_amd64.tar.gz"
-      sha256 "9476fb0941e3895bb7515e8023cb506700bd5711c439150cf90b14167c3f5b19"
+      url "https://github.com/jclement/drillbit/releases/download/v0.2.12/drillbit_0.2.12_linux_amd64.tar.gz"
+      sha256 "1a39905982de6f9a9135daa0984578fad14abbc7f1892571e1068e336dea013f"
       define_method(:install) do
         bin.install "drillbit"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/drillbit/releases/download/v0.2.11/drillbit_0.2.11_linux_arm64.tar.gz"
-      sha256 "fa315fea10dc0bb604ac91592f21ca6221dfc4b53e6a5a7de6c68ae9da7c07c8"
+      url "https://github.com/jclement/drillbit/releases/download/v0.2.12/drillbit_0.2.12_linux_arm64.tar.gz"
+      sha256 "4549ae5c6c07e6c3dff8c105a52ec7e64afe0fc8d69d4f648d38967d3ba51a9b"
       define_method(:install) do
         bin.install "drillbit"
       end
