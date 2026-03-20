@@ -5,20 +5,20 @@
 class Deaddrop < Formula
   desc "Print your secrets without trusting your printer"
   homepage "https://github.com/jclement/deaddrop"
-  version "0.1.1"
+  version "0.1.2"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/deaddrop/releases/download/v0.1.1/deaddrop_darwin_amd64.tar.gz"
-      sha256 "6af600a4b2efb10251b6bd805fc79e7795f34689fbaa6fc2aada17c8c9bbae33"
+      url "https://github.com/jclement/deaddrop/releases/download/v0.1.2/deaddrop_darwin_amd64.tar.gz"
+      sha256 "c192767a2f534522d78135a3b9f95f36301fe0f50452cfd50e6ec6601d6dec3a"
 
       define_method(:install) do
         bin.install "deaddrop"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/deaddrop/releases/download/v0.1.1/deaddrop_darwin_arm64.tar.gz"
-      sha256 "628c9bb8525ebb9e0236c9c8713d24dbe078656f505f2da7f7bc771b5c30ca00"
+      url "https://github.com/jclement/deaddrop/releases/download/v0.1.2/deaddrop_darwin_arm64.tar.gz"
+      sha256 "4ccb440d78f8623149b55e69c3450dd8da19b619f29253374bb2543c3da05539"
 
       define_method(:install) do
         bin.install "deaddrop"
@@ -28,15 +28,15 @@ class Deaddrop < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/deaddrop/releases/download/v0.1.1/deaddrop_linux_amd64.tar.gz"
-      sha256 "fd69bdde206253643f8d1f73f222582547e0c686f05b0602ada45d2e8baa6c43"
+      url "https://github.com/jclement/deaddrop/releases/download/v0.1.2/deaddrop_linux_amd64.tar.gz"
+      sha256 "bb2729ddad5b7a2d756a5ad0d21d1ddada691df5c0f2edc142a370f22789e3e5"
       define_method(:install) do
         bin.install "deaddrop"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/deaddrop/releases/download/v0.1.1/deaddrop_linux_arm64.tar.gz"
-      sha256 "b0899231de873c7e91443d19da754592f8ef535955f1972a3acfa922e1578dc6"
+      url "https://github.com/jclement/deaddrop/releases/download/v0.1.2/deaddrop_linux_arm64.tar.gz"
+      sha256 "e3e6ab9bcfd87cffee0d40a1982d7cf934a63c4e8158727928982cd406eebede"
       define_method(:install) do
         bin.install "deaddrop"
       end
