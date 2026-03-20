@@ -5,20 +5,20 @@
 class Doomsday < Formula
   desc "Backup for the end of the world"
   homepage "https://github.com/jclement/doomsday"
-  version "0.1.3"
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/doomsday/releases/download/v0.1.3/doomsday_darwin_amd64.tar.gz"
-      sha256 "39ced6768ce23b4085a4a59cece6165b0179584dd970387e44e51aafdb91fe1c"
+      url "https://github.com/jclement/doomsday/releases/download/v0.1.4/doomsday_darwin_amd64.tar.gz"
+      sha256 "49264ed3f119bddd834e96fb2e9446e30c3520b92161cda5066ffeedecaf85c7"
 
       define_method(:install) do
         bin.install "doomsday"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/doomsday/releases/download/v0.1.3/doomsday_darwin_arm64.tar.gz"
-      sha256 "6c59a4841f3b22e44c577a1405359e52259553e4fb6771c83e0bbf0efc862b7e"
+      url "https://github.com/jclement/doomsday/releases/download/v0.1.4/doomsday_darwin_arm64.tar.gz"
+      sha256 "0c379a1d27cddbbdced857e8fc774ec062ac885d603c7fbe871d029bbe854f29"
 
       define_method(:install) do
         bin.install "doomsday"
@@ -28,15 +28,15 @@ class Doomsday < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/doomsday/releases/download/v0.1.3/doomsday_linux_amd64.tar.gz"
-      sha256 "647faffe620d8872208f1dcffbb1415851971497f2af0ce81aa708aa1ff42956"
+      url "https://github.com/jclement/doomsday/releases/download/v0.1.4/doomsday_linux_amd64.tar.gz"
+      sha256 "6f34441a7cbeed99d3b5702250cc99f726400af02567fcd81b826fc3431bd93d"
       define_method(:install) do
         bin.install "doomsday"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/doomsday/releases/download/v0.1.3/doomsday_linux_arm64.tar.gz"
-      sha256 "c419b08868e96e4a82886a3ca349cc20cbacc4a2a3d17aec365d65e422cc35ec"
+      url "https://github.com/jclement/doomsday/releases/download/v0.1.4/doomsday_linux_arm64.tar.gz"
+      sha256 "0bc5bc552520ffbd983b520a61319c453e3a4b0c62265a555efcd9306bc9bb20"
       define_method(:install) do
         bin.install "doomsday"
       end
