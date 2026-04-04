@@ -5,21 +5,21 @@
 class Gatecrash < Formula
   desc "Gatecrash tunnel client"
   homepage "https://github.com/jclement/gatecrash"
-  version "0.8.2"
+  version "0.8.3"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.2/gatecrash_darwin_amd64.tar.gz"
-      sha256 "af228be7f2e5f5c1d249c7b30cdb2e2993b9e1f5afba3dfa3e3fd35b46e02123"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.3/gatecrash_darwin_amd64.tar.gz"
+      sha256 "6cc8f7fa2904d14524fd0e61cbf7738e69630824765e1f64576afe7536d29280"
 
       define_method(:install) do
         bin.install "gatecrash"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.2/gatecrash_darwin_arm64.tar.gz"
-      sha256 "7fc1af63ba39db24f74eee5b96dfd3f185df3fcfdf21caefc1b50379fd62cdb4"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.3/gatecrash_darwin_arm64.tar.gz"
+      sha256 "ad7b21d17e517ae4eb04e6b246bddd1130c3fb3aa87012189ccbc1d902214578"
 
       define_method(:install) do
         bin.install "gatecrash"
@@ -29,15 +29,15 @@ class Gatecrash < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.2/gatecrash_linux_amd64.tar.gz"
-      sha256 "18db49d51576c703fccf61e7090e170dc4fb67b74690cf3c862231f676e4fcbe"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.3/gatecrash_linux_amd64.tar.gz"
+      sha256 "991e714e246ae84b9ff4d03e302c2d7d1fc860d50a57e5db621ebb08b98568b9"
       define_method(:install) do
         bin.install "gatecrash"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.2/gatecrash_linux_arm64.tar.gz"
-      sha256 "0b91459a55ff85aa24d7e4ca63a82a63f0714db7d51d67abd0de0aa693bbdab9"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.3/gatecrash_linux_arm64.tar.gz"
+      sha256 "8e8ef951b35f2f084b910b214a2f9e51e63d9970bbe96fc67dcae9d16af6460d"
       define_method(:install) do
         bin.install "gatecrash"
       end
