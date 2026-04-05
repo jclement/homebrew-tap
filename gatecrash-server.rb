@@ -5,21 +5,21 @@
 class GatecrashServer < Formula
   desc "Gatecrash tunnel server with admin panel and automatic TLS"
   homepage "https://github.com/jclement/gatecrash"
-  version "0.8.8"
+  version "0.8.9"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.8/gatecrash-server_darwin_amd64.tar.gz"
-      sha256 "36e24b6d7a91c7689a5bda08213b5c7533341d6d9888be613deea59de82593bd"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.9/gatecrash-server_darwin_amd64.tar.gz"
+      sha256 "6943993d344d13c7e040bae0188dc1658da55f3dfe451cabc070ee7cfd3d9712"
 
       define_method(:install) do
         bin.install "gatecrash-server"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.8/gatecrash-server_darwin_arm64.tar.gz"
-      sha256 "2b03dad611701e199fa0fba4180d056990aff1f9cbbb49a5a0749012b22ef058"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.9/gatecrash-server_darwin_arm64.tar.gz"
+      sha256 "c6f246a8d89aab76f3e7c7b4b92ac80416ed9aaff3655fc77c58ef1563e2c851"
 
       define_method(:install) do
         bin.install "gatecrash-server"
@@ -29,15 +29,15 @@ class GatecrashServer < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.8/gatecrash-server_linux_amd64.tar.gz"
-      sha256 "4ae67d5b52ae87b85ac5dd37ebe02e02e7559a8e61c9930a28d7e58345af439b"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.9/gatecrash-server_linux_amd64.tar.gz"
+      sha256 "4e8fb987fa8fa8c46afdf3ee67000b44ff50ce0861163da6faae46c4df63f1de"
       define_method(:install) do
         bin.install "gatecrash-server"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/gatecrash/releases/download/v0.8.8/gatecrash-server_linux_arm64.tar.gz"
-      sha256 "f7a36a211d73bf477a4e24075b57712b07a0e4038740d1dd0f266efcb98b00ac"
+      url "https://github.com/jclement/gatecrash/releases/download/v0.8.9/gatecrash-server_linux_arm64.tar.gz"
+      sha256 "a9573cd09dcf470a9a2568708c6759e91fe3dcae5c0aee80b4a86bede2c71d10"
       define_method(:install) do
         bin.install "gatecrash-server"
       end
