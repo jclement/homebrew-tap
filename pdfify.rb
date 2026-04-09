@@ -5,23 +5,23 @@
 class Pdfify < Formula
   desc "Convert Markdown to beautiful PDFs via Docker"
   homepage "https://github.com/jclement/pdfify"
-  version "0.1.0"
+  version "0.1.4"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/pdfify/releases/download/v0.1.0/pdfify_darwin_amd64.tar.gz"
-      sha256 "f7e1f54293f08ca3731dc1e7c7d8fdbd0952dc0268aa9bf22c598ada1695db6d"
+      url "https://github.com/jclement/pdfify/releases/download/v0.1.4/pdfify_darwin_amd64.tar.gz"
+      sha256 "5cfa1b122dfb76da749d2c76d2fda8407f21e015bad49d09938cbf2de35a8599"
 
       define_method(:install) do
         bin.install "pdfify"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/pdfify/releases/download/v0.1.0/pdfify_darwin_arm64.tar.gz"
-      sha256 "7d95f30018243c553daf8fbc2845aa0de3b1757474a8b5bf7d8240b664c5f0c4"
+      url "https://github.com/jclement/pdfify/releases/download/v0.1.4/pdfify_darwin_arm64.tar.gz"
+      sha256 "cecb3d9c3a4c268b2358b8c00aa6e53c13fa536075f53b44c72f8ce62b7096d1"
 
       define_method(:install) do
         bin.install "pdfify"
@@ -31,15 +31,15 @@ class Pdfify < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/pdfify/releases/download/v0.1.0/pdfify_linux_amd64.tar.gz"
-      sha256 "516aded5a0200de4d4c57f33ca591cdb598e9f24362c9902b31e6ee1b3133918"
+      url "https://github.com/jclement/pdfify/releases/download/v0.1.4/pdfify_linux_amd64.tar.gz"
+      sha256 "e94a32b0d64cd6724d7a830e5719e35e929a811fd9d9d431cadf34ce64a77542"
       define_method(:install) do
         bin.install "pdfify"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/pdfify/releases/download/v0.1.0/pdfify_linux_arm64.tar.gz"
-      sha256 "0e08ed99759721a87d271e22cd5a7f54fd1052b97faa48454942a8c4f86c3385"
+      url "https://github.com/jclement/pdfify/releases/download/v0.1.4/pdfify_linux_arm64.tar.gz"
+      sha256 "2aec984a45cdbd0c47d6c9e9a91861bf80b2bcc1a866e411161e5b7c79122474"
       define_method(:install) do
         bin.install "pdfify"
       end
