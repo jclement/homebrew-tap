@@ -5,23 +5,23 @@
 class Megaclawd < Formula
   desc "Sandboxed Claude Code development environments"
   homepage "https://github.com/jclement/megaclawd"
-  version "0.1.1"
+  version "0.1.2"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/megaclawd/releases/download/v0.1.1/megaclawd_darwin_amd64.tar.gz"
-      sha256 "915c712ba2370a9bf6fbd62912d5a968e5dd99ea2828550b52bfd8909f8c2333"
+      url "https://github.com/jclement/megaclawd/releases/download/v0.1.2/megaclawd_darwin_amd64.tar.gz"
+      sha256 "929d55d28290aa0d27aff81dc84aefbd4ee4f549994905c59e982cdb1505bebd"
 
       define_method(:install) do
         bin.install "megaclawd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/megaclawd/releases/download/v0.1.1/megaclawd_darwin_arm64.tar.gz"
-      sha256 "663fb090bdf2410a56ba79f27711805cd971af02a17a802fb817ffd2a8244fdf"
+      url "https://github.com/jclement/megaclawd/releases/download/v0.1.2/megaclawd_darwin_arm64.tar.gz"
+      sha256 "91aca7a464ee4d42ec198c7bf41b374c8f1b04d3644989b4fc0a233fbded00f0"
 
       define_method(:install) do
         bin.install "megaclawd"
@@ -31,15 +31,15 @@ class Megaclawd < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/megaclawd/releases/download/v0.1.1/megaclawd_linux_amd64.tar.gz"
-      sha256 "a190ed34cb6d575c2ea835554407eaee9ea7f3e501721b97f05b869d89601946"
+      url "https://github.com/jclement/megaclawd/releases/download/v0.1.2/megaclawd_linux_amd64.tar.gz"
+      sha256 "2cc82ed4e9a3a04ac13d998d19e574f78e743082da732633d3b3d907e3916cc7"
       define_method(:install) do
         bin.install "megaclawd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/megaclawd/releases/download/v0.1.1/megaclawd_linux_arm64.tar.gz"
-      sha256 "4f5ecb0e1baa62171d171ac12c286c0edeefb8c2c95512019b860b5def360f0a"
+      url "https://github.com/jclement/megaclawd/releases/download/v0.1.2/megaclawd_linux_arm64.tar.gz"
+      sha256 "bde1b5b133f62b877932e8af3f61d383e8a9d050a78468f0b09e9d798bdc0fdc"
       define_method(:install) do
         bin.install "megaclawd"
       end
