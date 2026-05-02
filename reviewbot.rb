@@ -5,23 +5,23 @@
 class Reviewbot < Formula
   desc "Agentic code review for the current branch"
   homepage "https://github.com/jclement/reviewbot"
-  version "0.0.1"
+  version "0.0.2"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/reviewbot/releases/download/v0.0.1/reviewbot_darwin_amd64.tar.gz"
-      sha256 "f5d0ccf7d130624ed8b94e87e7faa17abc923d3568e67545c5a366cbc4bcb33a"
+      url "https://github.com/jclement/reviewbot/releases/download/v0.0.2/reviewbot_darwin_amd64.tar.gz"
+      sha256 "695941fcc1bced8b527f91d19d6198aec15f4d508083f4934ef15044235b27a7"
 
       define_method(:install) do
         bin.install "reviewbot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/reviewbot/releases/download/v0.0.1/reviewbot_darwin_arm64.tar.gz"
-      sha256 "a83937cfdfba04a5f8e9fee83f97c9ee85fd07ab08cf3274072f8a9229a74148"
+      url "https://github.com/jclement/reviewbot/releases/download/v0.0.2/reviewbot_darwin_arm64.tar.gz"
+      sha256 "726ab84aa782aaa52115a92af6dc1f93412edc080a32076f966a10af5af143ce"
 
       define_method(:install) do
         bin.install "reviewbot"
@@ -31,15 +31,15 @@ class Reviewbot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/reviewbot/releases/download/v0.0.1/reviewbot_linux_amd64.tar.gz"
-      sha256 "f5c07d6c32d31dcb6785b94afa3a3cb48c7ff6263811965078984ecf9dcd7eb3"
+      url "https://github.com/jclement/reviewbot/releases/download/v0.0.2/reviewbot_linux_amd64.tar.gz"
+      sha256 "d1b5802244dc0f24e07bff55daedb91bd88e467c0b9ad29fb030c0e90af36498"
       define_method(:install) do
         bin.install "reviewbot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/reviewbot/releases/download/v0.0.1/reviewbot_linux_arm64.tar.gz"
-      sha256 "577dfa431d4d9a418329b6ab4e5df0af93e268a40ef926a9378221bb814f0b15"
+      url "https://github.com/jclement/reviewbot/releases/download/v0.0.2/reviewbot_linux_arm64.tar.gz"
+      sha256 "2b47748c470fe48643294e80e04dd5a91f08df26f247fdfef556077f6d80159b"
       define_method(:install) do
         bin.install "reviewbot"
       end
