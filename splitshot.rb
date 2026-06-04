@@ -5,21 +5,21 @@
 class Splitshot < Formula
   desc "Generate secure secrets and split them with Shamir secret sharing (SLIP-0039)"
   homepage "https://github.com/jclement/splitshot"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/splitshot/releases/download/v0.1.0/splitshot_darwin_amd64.tar.gz"
-      sha256 "c96f5da8d2082ac15a7e0e23c593bc74a2dd50516fd20c343872e7d31a20f507"
+      url "https://github.com/jclement/splitshot/releases/download/v0.1.1/splitshot_darwin_amd64.tar.gz"
+      sha256 "0c360c3262ff05a0bc11af6f3fc6229a55ffbf11b7cae42a203c026f4840a9cf"
 
       define_method(:install) do
         bin.install "splitshot"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/splitshot/releases/download/v0.1.0/splitshot_darwin_arm64.tar.gz"
-      sha256 "9513d6655c94353d4c59311f4e98709f2e8e168547d471dbd12b58b554118517"
+      url "https://github.com/jclement/splitshot/releases/download/v0.1.1/splitshot_darwin_arm64.tar.gz"
+      sha256 "ee66af77dcfdd9f0a4d97d84d23667142bb318a65ba77408fdcd64b48f99431c"
 
       define_method(:install) do
         bin.install "splitshot"
@@ -29,15 +29,15 @@ class Splitshot < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/splitshot/releases/download/v0.1.0/splitshot_linux_amd64.tar.gz"
-      sha256 "1bbbb80bd2b80383f17665750b97605963c8ee66e16c94360455c60296463836"
+      url "https://github.com/jclement/splitshot/releases/download/v0.1.1/splitshot_linux_amd64.tar.gz"
+      sha256 "e8c1f7107c4dc23bedb71b85585bdd3515ff09fc646f4c802936e5d284c322b1"
       define_method(:install) do
         bin.install "splitshot"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/splitshot/releases/download/v0.1.0/splitshot_linux_arm64.tar.gz"
-      sha256 "483ecddac20a36fec93aeefcadc5ff23a70d8e7a4187d00f6a89a1d0b43b2bbb"
+      url "https://github.com/jclement/splitshot/releases/download/v0.1.1/splitshot_linux_arm64.tar.gz"
+      sha256 "6e499f3b16a50d738829abc95cd6c3150285f347a8da30ca59d2a67224f02c26"
       define_method(:install) do
         bin.install "splitshot"
       end
