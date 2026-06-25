@@ -5,23 +5,23 @@
 class Shellraiser < Formula
   desc "Sandboxed vibe-coding coordinator — one UI for many per-project worker containers"
   homepage "https://github.com/jclement/shellraiser"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "docker" => :optional
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/shellraiser/releases/download/v0.1.0/sr_darwin_amd64.tar.gz"
-      sha256 "70e6f164428c4dea883cc20666313c3df44066e8747c216ca0a05f87b3fe2350"
+      url "https://github.com/jclement/shellraiser/releases/download/v0.1.1/sr_darwin_amd64.tar.gz"
+      sha256 "dade0fbcc061c3f3f09a79b82b87c1bf7b7b5d490837fc88be7e707995bdfb0d"
 
       define_method(:install) do
         bin.install "sr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/shellraiser/releases/download/v0.1.0/sr_darwin_arm64.tar.gz"
-      sha256 "f0e70767a8835425397ebfd0370defb678ea7999631741e020536d710a8bfb5f"
+      url "https://github.com/jclement/shellraiser/releases/download/v0.1.1/sr_darwin_arm64.tar.gz"
+      sha256 "1e024d4ffd81dc47e57e751da1ccf3fa153ea12458df54d81766f96e7f272786"
 
       define_method(:install) do
         bin.install "sr"
@@ -31,15 +31,15 @@ class Shellraiser < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/shellraiser/releases/download/v0.1.0/sr_linux_amd64.tar.gz"
-      sha256 "30b4594bce7b793509c77cd7d1597c511c9ff1e56ffed08c85292103757382e1"
+      url "https://github.com/jclement/shellraiser/releases/download/v0.1.1/sr_linux_amd64.tar.gz"
+      sha256 "f297adc8fee39219855b408b7903c9b904d8bab6ea558038f3376c6a9d0344ed"
       define_method(:install) do
         bin.install "sr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/shellraiser/releases/download/v0.1.0/sr_linux_arm64.tar.gz"
-      sha256 "ae363f41031f3ae87b32c951627fc1bffb7ff0f6c5abd37865d53ecd0ec217c6"
+      url "https://github.com/jclement/shellraiser/releases/download/v0.1.1/sr_linux_arm64.tar.gz"
+      sha256 "7717b697ebb0be4f47c28ba1b4bf87064f40f648e76e001ad9ba55c601aa5c98"
       define_method(:install) do
         bin.install "sr"
       end
