@@ -5,21 +5,21 @@
 class Tokenwatch < Formula
   desc "Sync your Claude Code & Codex token stats to TokenWatch"
   homepage "https://tokens.onewheelgeek.net"
-  version "0.2.1"
+  version "0.2.2"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.1/tokenwatch_darwin_amd64.tar.gz"
-      sha256 "6c15f5441aa67d5619ef2473e4fd255a17a43fd5950e38aed69d98fb7ae10351"
+      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.2/tokenwatch_darwin_amd64.tar.gz"
+      sha256 "17dda069f1344ab6a57c3da42958aa9d914dd40cf586b862c48eadcef26b460f"
 
       define_method(:install) do
         bin.install "tokenwatch"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.1/tokenwatch_darwin_arm64.tar.gz"
-      sha256 "64c739972f0728f2e4f6da72df77963dfe915309a82fca46b117d5741e079bc6"
+      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.2/tokenwatch_darwin_arm64.tar.gz"
+      sha256 "880b1b99c5abbb4039312465cc0a12d546fc61763e0e88540fc7bd96ef0eb027"
 
       define_method(:install) do
         bin.install "tokenwatch"
@@ -29,15 +29,15 @@ class Tokenwatch < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.1/tokenwatch_linux_amd64.tar.gz"
-      sha256 "c367ba55f5ed1ab93f424d41c9b12912ffdcb0fd66bffc87227014c9cbc8d119"
+      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.2/tokenwatch_linux_amd64.tar.gz"
+      sha256 "9cbcae21b41a3d63581af69724678536a87dd1f1cdcabbe50249306002bafe79"
       define_method(:install) do
         bin.install "tokenwatch"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.1/tokenwatch_linux_arm64.tar.gz"
-      sha256 "4b870659016d855ed8343784598abc0a09f7bf952c35f9ea72a20d9801c36d15"
+      url "https://github.com/jclement/tokenwatch/releases/download/v0.2.2/tokenwatch_linux_arm64.tar.gz"
+      sha256 "dbdb69e2ea89827f1228ad15ed7fdeb607afaac0e182bd3ee141fb9c361d4ea8"
       define_method(:install) do
         bin.install "tokenwatch"
       end
