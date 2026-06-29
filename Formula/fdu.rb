@@ -5,21 +5,21 @@
 class Fdu < Formula
   desc "Fancy disk usage — a colorful TUI for finding what's eating your disk"
   homepage "https://github.com/jclement/fdu"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/fdu/releases/download/v0.1.0/fdu_0.1.0_darwin_amd64.tar.gz"
-      sha256 "ffabcd70aec1fb85fe53438451af05901e46bb8c8f6f0f9c3ff6efe1527f5f34"
+      url "https://github.com/jclement/fdu/releases/download/v0.1.1/fdu_0.1.1_darwin_amd64.tar.gz"
+      sha256 "6a828ec5e73663e4f9a1326f9fa55bfdb387156d956fa96f0fe91152637dae6f"
 
       define_method(:install) do
         bin.install "fdu"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/fdu/releases/download/v0.1.0/fdu_0.1.0_darwin_arm64.tar.gz"
-      sha256 "ef0f4d2a0cb2ab2c7a2146717a56ee2aad25cf8ec613c734a499277f16366fbd"
+      url "https://github.com/jclement/fdu/releases/download/v0.1.1/fdu_0.1.1_darwin_arm64.tar.gz"
+      sha256 "1b54e48cdec0c9b3320b3a53cd668fb056feaf04ea6129ec6cff78057fe850d6"
 
       define_method(:install) do
         bin.install "fdu"
@@ -29,15 +29,15 @@ class Fdu < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/fdu/releases/download/v0.1.0/fdu_0.1.0_linux_amd64.tar.gz"
-      sha256 "457e560f871d219dd07973a1818f9ff0e85d1e2e5556e652c0d13878880d7f78"
+      url "https://github.com/jclement/fdu/releases/download/v0.1.1/fdu_0.1.1_linux_amd64.tar.gz"
+      sha256 "b922236b4b0d904c89706f2c8262ed90c8889c4647ed12947d4944a6d080f96f"
       define_method(:install) do
         bin.install "fdu"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/fdu/releases/download/v0.1.0/fdu_0.1.0_linux_arm64.tar.gz"
-      sha256 "7bc24ef65e09326e807328a7b7721d75b42f6401c9d1f322b6c9ce5cdf3d2482"
+      url "https://github.com/jclement/fdu/releases/download/v0.1.1/fdu_0.1.1_linux_arm64.tar.gz"
+      sha256 "bce16367b1c47bb5676c4e50a540eca908dbc0f4d3252638e410d7e2e1157ff0"
       define_method(:install) do
         bin.install "fdu"
       end
