@@ -5,21 +5,21 @@
 class Picos3 < Formula
   desc "Tiny single-bucket S3-compatible object store"
   homepage "https://github.com/jclement/picos3"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/picos3/releases/download/v0.2.0/picos3_0.2.0_darwin_amd64.tar.gz"
-      sha256 "c3f74305173b040ff047b6311aa0cd297b6cc89ef9acc6b70951413353467893"
+      url "https://github.com/jclement/picos3/releases/download/v0.2.1/picos3_0.2.1_darwin_amd64.tar.gz"
+      sha256 "c4c18bc955af7f722de1a51cb8057a28a01e3bfab37dbdd2e0a98f639c52c5ab"
 
       define_method(:install) do
         bin.install "picos3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/picos3/releases/download/v0.2.0/picos3_0.2.0_darwin_arm64.tar.gz"
-      sha256 "13662f555000e3930dcba64a372e49177b2acb0ac4e89b4aecf1d9cccda2c73c"
+      url "https://github.com/jclement/picos3/releases/download/v0.2.1/picos3_0.2.1_darwin_arm64.tar.gz"
+      sha256 "6a23e429e273745e4c00a230c028b5a4db90696bf6a2779b17076d592670c4bc"
 
       define_method(:install) do
         bin.install "picos3"
@@ -29,15 +29,15 @@ class Picos3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/picos3/releases/download/v0.2.0/picos3_0.2.0_linux_amd64.tar.gz"
-      sha256 "1c49ee3cfc9cc9c2f56800c54987452bdefbd3dbaee6f022aed92e1ccb2e1690"
+      url "https://github.com/jclement/picos3/releases/download/v0.2.1/picos3_0.2.1_linux_amd64.tar.gz"
+      sha256 "75859e140901d5c3a840a1b5b3f1582ddbf846f66e19034b56dd70c91bb5ad59"
       define_method(:install) do
         bin.install "picos3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/picos3/releases/download/v0.2.0/picos3_0.2.0_linux_arm64.tar.gz"
-      sha256 "033a22f047ebdb8aee3cbb6fb249a947c6a4a9f9224070999f9f70048a614de1"
+      url "https://github.com/jclement/picos3/releases/download/v0.2.1/picos3_0.2.1_linux_arm64.tar.gz"
+      sha256 "f3c14ba89c2d2097e7c45698cffc632fb03ce28c317b9480b383f4478689dc11"
       define_method(:install) do
         bin.install "picos3"
       end
