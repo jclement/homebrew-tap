@@ -5,21 +5,21 @@
 class Cone < Formula
   desc "A coordination board for coding agents — a folder is the protocol"
   homepage "https://github.com/jclement/cone"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/cone/releases/download/v0.1.0/cone_0.1.0_darwin_amd64.tar.gz"
-      sha256 "285893b3a2bc42443dc0ecbeed28cf70c402ac20c00e46c45b3b29b560e57f70"
+      url "https://github.com/jclement/cone/releases/download/v0.2.0/cone_0.2.0_darwin_amd64.tar.gz"
+      sha256 "63383fae7e696363ca55f12e5df8cbcd9a07e449d272781bd79cfacc92c21433"
 
       define_method(:install) do
         bin.install "cone"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/cone/releases/download/v0.1.0/cone_0.1.0_darwin_arm64.tar.gz"
-      sha256 "4462d47b8a64c455e65a78a786e88e86f5e0c5598de081def44b16fe8958fa23"
+      url "https://github.com/jclement/cone/releases/download/v0.2.0/cone_0.2.0_darwin_arm64.tar.gz"
+      sha256 "4ab4fa082ca3f95f748ddd38a46936882f847809b03247e3405338b9e139434e"
 
       define_method(:install) do
         bin.install "cone"
@@ -29,15 +29,15 @@ class Cone < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/cone/releases/download/v0.1.0/cone_0.1.0_linux_amd64.tar.gz"
-      sha256 "b1dc691dc68f9a4cb0ad17e166b5dd1066cf32450f33c0078aac417bddc6992a"
+      url "https://github.com/jclement/cone/releases/download/v0.2.0/cone_0.2.0_linux_amd64.tar.gz"
+      sha256 "ab333b4ec4e5d1e5ea15d85a5a284082d82152fbbf596a409ec6961937d365c8"
       define_method(:install) do
         bin.install "cone"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/cone/releases/download/v0.1.0/cone_0.1.0_linux_arm64.tar.gz"
-      sha256 "5da8e4af44d2a42a428567eb396bb75fe9085909f931a669d853355e5e6c7224"
+      url "https://github.com/jclement/cone/releases/download/v0.2.0/cone_0.2.0_linux_arm64.tar.gz"
+      sha256 "e4129465c823173ab82040c5005ff75c280f6fb2f70f5070c3758284e9f55392"
       define_method(:install) do
         bin.install "cone"
       end
