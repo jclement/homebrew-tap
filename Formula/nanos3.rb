@@ -5,21 +5,21 @@
 class Nanos3 < Formula
   desc "Tiny S3-compatible object store with a live web dashboard"
   homepage "https://github.com/jclement/nanos3"
-  version "0.2.0"
+  version "0.2.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jclement/nanos3/releases/download/v0.2.0/nanos3_0.2.0_darwin_amd64.tar.gz"
-      sha256 "785824565d8fb780f4f3a94c38a5804325713b2b928fb0b0ee5246ead9fa1523"
+      url "https://github.com/jclement/nanos3/releases/download/v0.2.1/nanos3_0.2.1_darwin_amd64.tar.gz"
+      sha256 "5c8875d5f17b4cf6bb9fad1cc37fcdaf47ca7d953ed9e202f1943e53a0c16131"
 
       define_method(:install) do
         bin.install "nanos3"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jclement/nanos3/releases/download/v0.2.0/nanos3_0.2.0_darwin_arm64.tar.gz"
-      sha256 "b079409a4d19150d827242c53d7d90905abf5db98334139a1b19ed69306721d8"
+      url "https://github.com/jclement/nanos3/releases/download/v0.2.1/nanos3_0.2.1_darwin_arm64.tar.gz"
+      sha256 "5f5e8a686cd5adceb634c394e575261f3ae9eff9c8a4504af596e4e8fca21b86"
 
       define_method(:install) do
         bin.install "nanos3"
@@ -29,15 +29,15 @@ class Nanos3 < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/nanos3/releases/download/v0.2.0/nanos3_0.2.0_linux_amd64.tar.gz"
-      sha256 "660921e12fb1592df27d4b39b0966d0b79e157c088dc04f606a8f93fd2d73475"
+      url "https://github.com/jclement/nanos3/releases/download/v0.2.1/nanos3_0.2.1_linux_amd64.tar.gz"
+      sha256 "0f2a57e191e7f295c939436d698ade6dd8cdf76bc6366aaace5418fe9a2b856e"
       define_method(:install) do
         bin.install "nanos3"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jclement/nanos3/releases/download/v0.2.0/nanos3_0.2.0_linux_arm64.tar.gz"
-      sha256 "ce3471f7fdd3d5b4f4e9e9e7c9f388340c98ab92f0a1f679fc42d05e90837877"
+      url "https://github.com/jclement/nanos3/releases/download/v0.2.1/nanos3_0.2.1_linux_arm64.tar.gz"
+      sha256 "dc96713e93532caed18c9e3c28ddf95dbd0689f69b016eb7ae7f6cf5009fa7ed"
       define_method(:install) do
         bin.install "nanos3"
       end
