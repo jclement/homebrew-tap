@@ -11,11 +11,11 @@
 class Prettyprompt < Formula
   desc "Beautiful macOS prompts for shell scripts"
   homepage "https://github.com/jclement/prettyprompt"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
-  url "https://github.com/jclement/prettyprompt/releases/download/v0.1.0/prettyprompt_0.1.0_darwin_universal.tar.gz"
-  sha256 "4ed6ffc86c3b2845764dd892b0a7c252cc37b7219b71831599eb6015f241db54"
+  url "https://github.com/jclement/prettyprompt/releases/download/v0.1.1/prettyprompt_0.1.1_darwin_universal.tar.gz"
+  sha256 "2e575d1180c6be7dce33f62fbd99c361c947f5d9a08fccc8a2f8a3b49ecf29ab"
 
   depends_on macos: :sonoma
 
